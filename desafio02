@@ -1,0 +1,7 @@
+import pandas as pd
+
+caminho = 'dados_imoveis.csv'
+arquivo = pd.read_csv(caminho)
+
+print(arquivo[arquivo.Bairro == 'Vila Mariana'])
+print(arquivo.query('Bairro == "Vila Mariana"'))
