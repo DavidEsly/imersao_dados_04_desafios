@@ -1,0 +1,4 @@
+dados.groupby(["Bairro"]).mean()
+dados.groupby(["Bairro"]).median()
+dados.groupby(["Bairro"]).min()
+dados.groupby(["Bairro"]).max()
