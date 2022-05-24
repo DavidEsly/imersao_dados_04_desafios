@@ -1,0 +1,15 @@
+import pandas as pd
+
+caminho = "https://gist.githubusercontent.com/tgcsantos/3bdb29eba6ce391e90df2b72205ba891/raw/22fa920e80c9fa209a9fccc8b52d74cc95d1599b/dados_imoveis.csv"
+dados = pd.read_csv(caminho)
+
+lista_bairros = list()
+
+for b in dados['Bairro'].values:
+  if b not in lista_bairros:
+    lista_bairros.append(b)
+
+for bar in lista_bairros:
+  tot_p_bairro = dados['Bairro'] == bar
+  tot_bairro = dados[tot_p_bairro]
+  print("O bairro {} tem uma média de {} m²".format(bar, tot_bairro['Metragem'].mean()))
