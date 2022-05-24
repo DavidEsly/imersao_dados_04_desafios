@@ -1,0 +1,4 @@
+num_imoveis_p_bairro = dados["Bairro"].value_counts()
+num_imoveis_p_bairro.head(10).plot.bar()
+num_imoveis_p_bairro.head(10).plot.area()
+num_imoveis_p_bairro.head(10).plot.barh()
