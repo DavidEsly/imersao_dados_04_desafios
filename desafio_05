@@ -1,0 +1,2 @@
+dados[dados.Rua.isna()]["Bairro"].value_counts()
+dados[dados.Bairro.isna()]
